@@ -1,20 +1,34 @@
-// Import essential libraries 
-const express = require('express'); 
-const app = express(); 
-const path = require('path'); 
-const router = express.Router(); 
-// Setup essential routes 
-router.get('/', function(req, res) { 
-    res.sendFile(path.join(__dirname + '/index.html')); 
-    //__dirname : It will resolve to your project folder. 
-}); 
-router.get('/about', function(req, res) { 
-    res.sendFile(path.join(__dirname + '/about.html')); 
-}); 
-router.get('/sitemap', function(req, res) { 
-    res.sendFile(path.join(__dirname + '/sitemap.html')); 
-}); 
-//add the router 
-app.use('/', router); 
-app.listen(process.env.port || 3000); 
-console.log('Running at Port 3000'); 
+<html> 
+<head> 
+    <title>Express HTML</title> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> 
+</head> 
+<body> 
+    <div style="margin:100px;"> 
+        class="navbar navbar-inverse navbar-static-top"> 
+        <div class="container"> 
+            <a class="navbar-brand" href="/">Express HTML</a> 
+            <ul class="nav navbar-nav"> 
+                <li class="active"> 
+                    <a href="/">Home</a> 
+                </li> 
+                <li> 
+                    <a href="/about">About</a> 
+                </li> 
+                <li> 
+                    <a href="/sitemap">Sitemap</a> 
+                </li> 
+            </ul> 
+        </div> 
+        </nav> 
+        <div class="jumbotron" style="padding:40px;"> 
+            <h1>Hello, world!</h1> 
+            <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attenion to featured content or information.</p> 
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> 
+        </div> 
+    </div> 
+</body> 
+</html> 
